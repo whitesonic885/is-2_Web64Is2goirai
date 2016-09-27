@@ -30,7 +30,7 @@
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <OldToolsVersion>2.0</OldToolsVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -87,12 +87,10 @@
   <ItemGroup>
     <Reference Include="is2common">
       <Name>is2common</Name>
-      <HintPath>..\is2common\bin\Release\is2common.dll</HintPath>
+      <HintPath>..\is2common\obj\Debug\is2common.dll</HintPath>
     </Reference>
     <Reference Include="Oracle.DataAccess">
-      <Name>Oracle.DataAccess</Name>
-      <HintPath>..\..\..\oracle\product\10.1.0\Db_1\bin\Oracle.DataAccess.dll</HintPath>
-      <AssemblyFolderKey>hklm\dn\odp.net</AssemblyFolderKey>
+      <HintPath>..\is2common\obj\Debug\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -143,6 +141,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="goirai_profile.pubxml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -162,9 +163,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>62008</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:64314/</IISUrl>
+          <IISUrl>http://localhost/is2/is2goirai</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
